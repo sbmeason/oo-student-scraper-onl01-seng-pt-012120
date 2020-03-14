@@ -5,7 +5,11 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    
+    send("name=", student_hash[:name])
+    self.send("location=", student_hash[:location])
+    self.send("profile_url=", student_hash[:profile_url])
+    @@all << self
+  end
   end
 
   def self.create_from_collection(students_array)
