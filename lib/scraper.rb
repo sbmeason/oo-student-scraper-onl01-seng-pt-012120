@@ -21,7 +21,7 @@ class Scraper
     return_hash = {}
 
       social = doc.css(".vitals-container .social-icon-container a")
-      social.each do |element| #iterate through each of the social elements and assign the keys if the item exists
+      social.each do |element| 
         if element.attr('href').include?("twitter")
           return_hash[:twitter] = element.attr('href')
         elsif element.attr('href').include?("linkedin")
