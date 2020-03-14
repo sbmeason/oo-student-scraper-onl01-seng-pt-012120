@@ -15,7 +15,11 @@ class Scraper
       student_details[:location] = details.css(".student-location").text
       student_details[:profile_url] = details.attr("href")
       students << student_details
+      end
     end
+  
+  def self.scrape_profile_page(profile_url)
+    
   
 end
 
